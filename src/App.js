@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+
+const data = [
+  'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT',
+  'NINE', 'TEN', 'ELEVEN', 'TWELEVE'
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='assign-container'>
+
+      {
+        data?.map((val, ind) => {
+          return (
+            <div className='assign-box' key={ind}>
+              <p>{val}</p>
+            </div>
+          );
+        })
+      }
+
     </div>
   );
 }
